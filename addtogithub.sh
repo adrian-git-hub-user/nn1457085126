@@ -9,8 +9,7 @@ projectname=$foldername$timestamp
 
 echo $projectname
 
-curl -u 'adrian-git-hub-user' https://api.github.com/user/repos -d '{"name":"'"$projectname"'"}'
-
+curl -i https://api.github.com/user/repos -u adrian-git-hub-user:$githubaccess -d '{"name":"'"testerproject"'"}'
 
 git init
 git add .
